@@ -1,0 +1,43 @@
+# DfpClient configurations
+ad_manager:
+  #############################################################################
+  # Required Fields                                                           #
+  #############################################################################
+  application_name: Madrid
+  #############################################################################
+  # Optional Fields                                                           #
+  #############################################################################
+  # The network_code is required for all services except NetworkService:
+  network_code: 6938
+  # delegated_account: INSERT_DOMAIN_WIDE_DELEGATION_ACCOUNT
+  #############################################################################
+  # OAuth2 Configuration                                                      #
+  # Below you may provide credentials for either the installed application or #
+  # service account (recommended) flows. Remove or comment the lines for the  #
+  # flow you're not using.                                                    #
+  #############################################################################
+  # The following values configure the client for the service account flow.
+  # path_to_private_key_file: INSERT_PATH_TO_FILE_HERE
+  # Only needed when using P12
+  service_account_email: madrid-investing@appspot.gserviceaccount.com
+  # The following values configure the client for the installed application
+  # flow.
+  client_id: 284207864098-3u5ppaf9eaclubl8uq0c1mdb8l1a5f4t.apps.googleusercontent.com
+  client_secret: 6ccj_GSg7VFQUgGbqFxLbRRL
+  refresh_token: 1/5ZzBdXu0tnpTY19tEBQG4dLmQT0IVcJ9XamdrAP6PHA
+
+logging:
+  version: 1
+  disable_existing_loggers: False
+  formatters:
+    default_fmt:
+      format: ext://googleads.util.LOGGER_FORMAT
+  handlers:
+    default_handler:
+      class: logging.StreamHandler
+      formatter: default_fmt
+      level: DEBUG
+  loggers:
+    "":
+      handlers: [default_handler]
+      level: DEBUG
