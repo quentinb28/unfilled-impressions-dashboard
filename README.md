@@ -15,9 +15,8 @@
 1. [Project Objectives](#Project-Objectives)
 2. [Resources / Tools](#Resources-/-Tools)
 3. [Data Collection](#Data-Collection)
-4. [Tableau Dashboard](#Tableau-Dashboard)
-5. [Contributing](#Contributing)
-6. [Licensing](#Licensing)
+4. [Contributing](#Contributing)
+5. [Licensing](#Licensing)
 
 ## 1. Project Objectives
 
@@ -39,10 +38,6 @@
   * Step 1: Get report yesterday of unfilled impressions per ad unit.
   * Step 2: Get average eCPM last 30 days per siteGeo.
   * Step 3: Compute potential revenue => unfilled impressions / 1000 * eCPM siteGeo wise.
-
-## 4. Tableau Dashboard
-
-
 
 ## 5. Contributing
 
