@@ -39,7 +39,7 @@
   * Step 2: Get average eCPM last 30 days per siteGeo.
   * Step 3: Compute potential revenue => unfilled impressions / 1000 * eCPM siteGeo wise.
 
-## 5. Contributing
+## 4. Contributing
 
 If you'd like to contribute, please fork the repository and use a feature
 branch. Pull requests are warmly welcome.
@@ -47,6 +47,6 @@ branch. Pull requests are warmly welcome.
 Please keep in mind that some of these projects might not be relevant anymore,
 as our processes constantly evolve.
 
-## 6. Licensing
+## 5. Licensing
 
 Copyright © Investing.com . All rights reserved.
