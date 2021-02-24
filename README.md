@@ -1,37 +1,50 @@
-# Unfilled Impressions Dashboard
-> Data Scientist at Investing.com since March 2019
+<h1 align="center">
+  Unfilled Impressions Dashboard
+</p>
 
-This directory was created to identify the unfilled impressions that could potentially generate money.
+<img src="https://github.com/quentinb28/unfilled-impressions-dashboard/blob/main/images/unfilled-impressions-dashboard.gif" width=100%>
 
-<img src="images/unfilled_imps_report.png" width="800" height="400" />
-Source: Tableau
+<p align="center">
+ <img src="https://img.shields.io/badge/admanager-v2021-pink.svg" />
+ <img src="https://img.shields.io/badge/python-v3.7-yellow.svg" />
+ <img src="https://img.shields.io/badge/tableau-v2019-informational.svg" />
+</p>
 
-## Installing / Getting started
+## Table of Contents
 
-The minimal requirements are pip and Python v 3.7.
+1. [Project Objectives](#Project-Objectives)
+2. [Resources / Tools](#Resources-/-Tools)
+3. [Data Collection](#Data-Collection)
+4. [Tableau Dashboard](#Tableau-Dashboard)
+5. [Contributing](#Contributing)
+6. [Licensing](#Licensing)
 
-## Developing / Publishing
+## 1. Project Objectives
 
-Here's a brief intro about what you must do in order to start developing
-the project further:
+* Collect Ad Manager report data
+* Estimate average eCPM per Country Site
+* Save table to Google BigQuery
+* Create a dynamic Tableau visual
 
-```shell
-git clone https://github.com/quentinb28/investingcom.git
-cd investingcom/create_unf_imps_report
-git checkout your_branch
-BRING YOUR AMAZING IDEAS!
-git add your_changes
-git commit -m 'added your_changes'
-git push
-```
+## 2. Resources / Tools
 
-## Features
-- get unfilled impressions report from Google Ad Manager (GAM)
-- compute Site Geo eCPMs over the last 30 days
-- compute potential revenue loss (unfilled impressions * eCPMs)
-- save to Google Big Query as unfilled_imps_report_yesterday
+* Ad Manager
+* Python
+* Tableau
 
-## Contributing
+## 3. Data Collection
+
+* Create Ad Manager class: [GAM class](https://github.com/quentinb28/unfilled-impressions-dashboard/blob/main/src/gam_class.py)
+* Build GCP function: [GCP function](https://github.com/quentinb28/unfilled-impressions-dashboard/blob/main/src/gcp_function.py)
+  * Step 1: Get report yesterday of unfilled impressions per ad unit.
+  * Step 2: Get average eCPM last 30 days per siteGeo.
+  * Step 3: Compute potential revenue => unfilled impressions / 1000 * eCPM siteGeo wise.
+
+## 4. Tableau Dashboard
+
+
+
+## 5. Contributing
 
 If you'd like to contribute, please fork the repository and use a feature
 branch. Pull requests are warmly welcome.
@@ -39,6 +52,6 @@ branch. Pull requests are warmly welcome.
 Please keep in mind that some of these projects might not be relevant anymore,
 as our processes constantly evolve.
 
-## Licensing
+## 6. Licensing
 
 Copyright © Investing.com . All rights reserved.
