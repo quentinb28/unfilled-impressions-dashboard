@@ -73,7 +73,10 @@ def gcp_function():
     yesterday_params = {
         'dimensions': DIMENSIONS_YESTERDAY,
         'columns': COLUMNS_YESTERDAY,
-        'dateRange': DATE_RANGE_YESTERDAY
+        #'dateRange': DATE_RANGE_YESTERDAY
+        'dateRange': DATE_RANGE_LAST30DAYS,
+        'startDate': '2021-01-07',
+        'endDate': '2021-02-23'
     }
 
     # Get report yesterday
