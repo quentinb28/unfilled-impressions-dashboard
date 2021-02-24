@@ -70,13 +70,18 @@ def gcp_function():
     """
 
     # Report yesterday params
+    # For a custom period:
+    # remove 'dateRange': DATE_RANGE_YESTERDAY
+    # add 'dateRange': DATE_RANGE_LAST30DAYS
+    # add 'startDate': date(start_year, start_month, start_day),
+    # add 'endDate': date(end_year, end_month, end_day)
     yesterday_params = {
         'dimensions': DIMENSIONS_YESTERDAY,
         'columns': COLUMNS_YESTERDAY,
         #'dateRange': DATE_RANGE_YESTERDAY
         'dateRange': DATE_RANGE_LAST30DAYS,
-        'startDate': '2021-01-07',
-        'endDate': '2021-02-23'
+        'startDate': date(2021, 1, 7),
+        'endDate': date(2021, 2, 23)
     }
 
     # Get report yesterday
