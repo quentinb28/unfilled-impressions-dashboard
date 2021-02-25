@@ -33,6 +33,9 @@ MANIFEST
 *.manifest
 *.spec
 
+# Confidential
+unfilled_imps_report.twb
+
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
