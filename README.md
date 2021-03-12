@@ -12,32 +12,32 @@
 
 ## Table of Contents
 
-1. [Project Objectives](#Project-Objectives)
-2. [Resources / Tools](#Resources-/-Tools)
-3. [Data Collection](#Data-Collection)
-4. [Contributing](#Contributing)
-5. [Licensing](#Licensing)
+1. [Situation](#Situation)
+2. [Techniques](#Techniques)
+3. [Action](#Action)
+4. [Results](#Results)
+5. [Contributing](#Contributing)
+6. [Licensing](#Licensing)
 
-## 1. Project Objectives
+## 1. Situation
 
-* Collect Ad Manager report data
-* Estimate average eCPM per Country Site
-* Save table to Google BigQuery
-* Create a dynamic Tableau visual
+Investing.com is a financial platform and news website; one of the top three global financial websites in the world. It offers market quotes,information about stocks, futures, options, analysis, commodities, and an economic calendar. Most of the revenue is generated through advertising; Premium and Remnant. The Remnant business models are CPL / CPA / Networks. The best bidder fills the ad request. Sometimes ad requests are not filled and generate unfilled impressions although closed deal might be avaible to run on those specific placements. This represents an opportunity cost.
 
-## 2. Resources / Tools
+## 2. Techniques
 
-* Ad Manager
-* Python
-* Tableau
+The technique was to collect and visualize those unfilled impressions. Then the idea was to compute the average eCPM (Rate * Events * 1000 / Impressions) over the last 30-day period per each SiteGeo combination and multiply that by the number of unfilled impressions to represent the opportunity cost.
 
-## 3. Data Collection
+## 3. Action
 
-* Create Ad Manager class: [GAM class](https://github.com/quentinb28/unfilled-impressions-dashboard/blob/main/src/gam_class.py)
-* Build GCP function: [GCP function](https://github.com/quentinb28/unfilled-impressions-dashboard/blob/main/src/gcp_function.py)
-  * Step 1: Get report yesterday of unfilled impressions per ad unit.
-  * Step 2: Get average eCPM last 30 days per siteGeo.
-  * Step 3: Compute potential revenue => unfilled impressions / 1000 * eCPM siteGeo wise.
+A Tableau dashboard was built to visualize those unfilled impressions in addition to the current day and month. Then the opportunity cost was computed:
+
+* Step 1: Get report of yesterday unfilled impressions from Ad Manager using Python.
+* Step 2: Compute average eCPM per each SiteGeo combination with last 30-day data.
+* Step 3: Compute the opportunity cost / potential revenue => unfilled impressions / 1000 * eCPM.
+
+## 4. Results
+
+The solution enables us to prioritize and make our decisions not only on the highest number of unfilled impressions but also on the highest opportunity cost.
 
 ## 4. Contributing
 
