@@ -28,11 +28,8 @@ Investing.com is a financial platform and news website; one of the top three glo
 For this project, the tasks that were performed are, as follows:
 
 * Collect the relevant report data for yesterday from Ad Manager (1), 
-
 * Collect data for all Network / Affiliation activities that occurred in the last 30 days (2),
-
 * Compute the average eCPM (Rate * Events * 1000 / Impressions) per each SiteGeo pair (3),
-
 * Compute the expected eCPM for all unfilled impressions based on each SiteGeo pair (4).
 
 ## 3. Action
