@@ -23,17 +23,21 @@
 
 Investing.com is a financial platform and news website; one of the top three global financial websites in the world. It offers market quotes,information about stocks, futures, options, analysis, commodities, and an economic calendar. Most of the revenue is generated through advertising; Premium and Remnant. The Remnant business models are CPL / CPA / Networks. The best bidder fills the ad request. Sometimes ad requests are not filled and generate unfilled impressions although closed deal might be avaible to run on those specific placements. This represents an opportunity cost.
 
-## 2. Techniques
+## 2. Task
 
-The technique was to collect and visualize those unfilled impressions. Then the idea was to compute the average eCPM (Rate * Events * 1000 / Impressions) over the last 30-day period per each SiteGeo combination and multiply that by the number of unfilled impressions to represent the opportunity cost.
+For this project, the tasks that were performed are, as follows:
+
+* Collect the relevant report data for yesterday from Ad Manager (1), 
+
+* Collect data for all Network / Affiliation activities that occurred in the last 30 days (2),
+
+* Compute the average eCPM (Rate * Events * 1000 / Impressions) over the last 30 days per each SiteGeo pair (3),
+
+* Compute the expected eCPM for all unfilled impressions based on each SiteGeo pair (4).
 
 ## 3. Action
 
-A Tableau dashboard was built to visualize those unfilled impressions in addition to the current day and month. Then the opportunity cost was computed:
-
-* Step 1: Get report of yesterday unfilled impressions from Ad Manager using Python.
-* Step 2: Compute average eCPM per each SiteGeo combination with last 30-day data.
-* Step 3: Compute the opportunity cost / potential revenue => unfilled impressions / 1000 * eCPM.
+First, I built a script in Python to extract the relevant data from Ad Manager and BigQuery. Then I computed the average eCPM per SiteGeo pair with the last 30-day traffic (Impressins + Revenue) and calculated the opportunity cost for all unfilled impressions. Finally I loaded the final result to a BigQuery table and built a Tableau dashboard from it so that all the relevant stakeholders, mostly my team, could access it.
 
 ## 4. Results
 
