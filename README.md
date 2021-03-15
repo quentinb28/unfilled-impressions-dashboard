@@ -31,7 +31,7 @@ For this project, the tasks that were performed are, as follows:
 
 * Collect data for all Network / Affiliation activities that occurred in the last 30 days (2),
 
-* Compute the average eCPM (Rate * Events * 1000 / Impressions) over the last 30 days per each SiteGeo pair (3),
+* Compute the average eCPM (Rate * Events * 1000 / Impressions) per each SiteGeo pair (3),
 
 * Compute the expected eCPM for all unfilled impressions based on each SiteGeo pair (4).
 
